@@ -1,0 +1,23 @@
+meta {
+  name: Update a Product
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/products/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Patines",
+    "price": 120.50,
+    "stockQuantity":100
+  }
+}
+
+settings {
+  encodeUrl: true
+}

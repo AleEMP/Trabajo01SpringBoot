@@ -1,0 +1,23 @@
+meta {
+  name: Create Customer
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johny.doe@example.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

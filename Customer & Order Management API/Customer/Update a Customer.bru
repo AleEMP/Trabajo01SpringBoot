@@ -1,0 +1,23 @@
+meta {
+  name: Update a Customer
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/api/customers/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "firstName": "Ale",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
